@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#This script is for command line args
+
+echo "Printign command line args"
+echo 'Name of the Program: ' $0
+echo "First argument: $1"
+echo "Second argument: $2"
+echo "Third argument: $3"
+echo "List of all arguments using \$*: $*"
+echo "List of all arguments using \$@: $@"
+echo "Total No of argumetns: $#"
+echo "Exit status of the last command: $?"
+echo "PID of the current Shell: $$"
+#echo "PID of the last background job:$!"
+
+
+#USe of $*
+
+for arg in $*
+do
+  echo "<$arg>"
+done
+
+
+#USe of $@
+
+for arg in $@
+do
+  echo "<$arg>"
+done
+
